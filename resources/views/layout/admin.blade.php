@@ -100,7 +100,7 @@
 
         <!-- /menu footer buttons -->
         <div class="sidebar-footer">
-            <a style="width:100%" data-toggle="tooltip" data-placement="top" title="Logout" href="/logout">
+            <a style="width:100%" data-toggle="tooltip" class="logout" data-placement="top" title="Logout" href="#">
             <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
             </a>
         </div>
@@ -131,7 +131,7 @@
                     </a>
                 </li>
                 <li><a href="javascript:;">Help</a></li>
-                <li><a href="/logout"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                <li><a href="#" class="logout"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
                 </ul>
             </li>
 
@@ -279,5 +279,24 @@
     @endif
 </script>
 
+<script>
+  $('.logout').click(function(){
+    swal({
+      title: "Anda Yakin?",
+      text: "Apakah anda yakin akan logout?",
+      icon: "warning",
+      buttons: true,
+      dangerMode: true,
+    })
+    .then((willLogout) => {
+      if (willLogout) {
+        window.location = "/logout";
+        swal("Anda telah berhasil keluar", {
+          icon: "success",
+        });
+      }
+    });
+  });
+</script>
 </body>
 </html>
