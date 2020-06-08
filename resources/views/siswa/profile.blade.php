@@ -71,7 +71,7 @@
                             <label class="control-label col-md-3 col-sm-3 col-xs-12">Jurusan
                             </label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input type="text"  class="form-control col-md-7 col-xs-12" value="@if($siswa->jurusan_id == '0') {{" "}} @else {{$siswa->jurusan->nama}} @endif" readonly>
+                            <input type="text"  class="form-control col-md-7 col-xs-12" value="@if($siswa->jurusan_id == '') {{" "}} @else {{$siswa->jurusan->nama}} @endif" readonly>
                             </div>
                         </div>
                         <div class="form-group">
