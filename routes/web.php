@@ -28,7 +28,7 @@ Route::group(['middleware' => ['auth', 'checkRole:admin']], function () {
     Route::get('/siswa/tambah','SiswaController@tambah');
     Route::post('/siswaregister', 'SiswaController@siswaregister');
     Route::get('/siswa/cetak', 'SiswaController@cetak');
-    // Route::get('/siswa/profile/edit', 'SiswaController@edit');
+    Route::get('/siswa/{id}/edit', 'SiswaController@editData');
 
     Route::get('/jurusan', 'JurusanController@index');
     Route::post('/postjurusan', 'JurusanController@create');

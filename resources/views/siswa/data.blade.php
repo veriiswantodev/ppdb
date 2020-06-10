@@ -33,6 +33,7 @@
                                     <th>Agama</th>
                                     <th>ALamat</th>
                                     <th>Jenis Kelamin</th>
+                                    <th>Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -45,6 +46,7 @@
                                     <td>{{$s->agama}}</td>
                                     <td>{{$s->alamat}}</td>
                                     <td>{{$s->jenis_kelamin}}</td>
+                                    <td><a href="/siswa/{{$s->id}}/edit" class="btn btn-warning btn-xs"><span class="fa fa-edit"></span></a></td>
                                 </tr>
                                 @endforeach
 

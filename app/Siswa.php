@@ -9,7 +9,7 @@ class Siswa extends Model
 {
     protected $table = 'siswa';
 
-    protected $fillable = ['user_id','nisn', 'nama', 'asal_sekolah', 'agama', 'alamat', 'jenis_kelamin','nik','jurusan_id','tmp_lahir','tgl_lahir','no_ijazah', 'avatar'];
+    protected $fillable = ['user_id','nisn', 'nama', 'asal_sekolah', 'agama', 'alamat', 'jenis_kelamin','nik','jurusan_id','tmp_lahir','tgl_lahir','no_ijazah', 'avatar', 'nik'];
 
     public function jurusan(){
         return $this->belongsTo(Jurusan::class);
@@ -26,6 +26,5 @@ class Siswa extends Model
         \Carbon\Carbon::setLocale('id');
         return \Carbon\Carbon::parse($this->attributes['created_at'])->format('d F Y');
         return \Carbon\Carbon::parse($this->attributes['updated_at'])->diffForHumans();
-
     }
 }

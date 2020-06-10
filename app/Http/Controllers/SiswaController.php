@@ -104,4 +104,11 @@ class SiswaController extends Controller
     public function cetak(){
         return view('siswa.cetak');
     }
+    
+    public function editData($id, Siswa $siswa){
+        $siswa = \App\Siswa::find($id);
+        $jurusan = Jurusan::all();
+        // dd($siswa);
+        return view('siswa.edit', compact('siswa', 'jurusan'));
+    }
 }
