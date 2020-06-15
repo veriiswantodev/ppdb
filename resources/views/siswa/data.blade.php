@@ -28,6 +28,7 @@
                             <thead>
                                 <tr role="row">
                                     <th>NISN</th>
+                                    <th>NIK</th>
                                     <th>Nama</th>
                                     <th>Asal Sekolah</th>
                                     <th>Agama</th>
@@ -41,12 +42,13 @@
                                 @foreach ($siswa as $s)
                                 <tr>
                                     <td>{{$s->nisn}}</td>
+                                    <td>@if($s->nik == "") {{"Data Belum di Edit"}} @else {{$s->nik}} @endif</td>
                                     <td>{{$s->nama}}</td>
                                     <td>{{$s->asal_sekolah}}</td>
                                     <td>{{$s->agama}}</td>
                                     <td>{{$s->alamat}}</td>
-                                    <td>{{$s->jenis_kelamin}}</td>
-                                    <td><a href="/siswa/{{$s->id}}/edit" class="btn btn-warning btn-xs"><span class="fa fa-edit"></span></a></td>
+                                    <td>@if($s->jenis_kelamin == "L") {{"Laki-Laki"}} @else {{"Perempuan"}} @endif</td>
+                                    <td><a href="/siswa/{{$s->id}}/edit" class="btn btn-warning btn-xs" data-toggle="tooltip" data-placement="right" title="Edit"><span class="fa fa-edit"></span></a></td>
                                 </tr>
                                 @endforeach
 
@@ -72,5 +74,9 @@
             });
         });
     </script>
-
+<script>
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+});
+</script>
 @endsection

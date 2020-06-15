@@ -12,7 +12,7 @@
 <!-- Bootstrap -->
 <link href="{{asset('/admin')}}/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 {{-- Bootstrap DataTable --}}
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
+<<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs/dt-1.10.21/b-1.6.2/b-html5-1.6.2/b-print-1.6.2/datatables.min.css"/>
 <!-- Font Awesome -->
 <link href="{{asset('/admin')}}/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 {{-- TOASTR --}}
@@ -265,8 +265,10 @@
 <script src="{{asset('/admin')}}/build/js/custom.min.js"></script>
 
 {{-- Datatable --}}
-<script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/v/bs/dt-1.10.21/b-1.6.2/b-html5-1.6.2/b-print-1.6.2/datatables.min.js"></script>
+
 
 {{-- sweetalert --}}
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
