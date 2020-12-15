@@ -16,17 +16,17 @@ class CreateSiswaTable extends Migration
         Schema::create('siswa', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('user_id');
-            $table->integer('jurusan_id')->nullable;
+            $table->integer('jurusan_id')->nullable();
             $table->string('nisn');
-            $table->integer('nik')->nullable;
+            $table->integer('nik')->nullable();
             $table->string('nama');
-            $table->string('tmp_lahir')->nullable;
-            $table->date('tgl_lahir')->nullable;
+            $table->string('tmp_lahir')->nullable();
+            $table->date('tgl_lahir')->nullable();
             $table->string('asal_sekolah');
             $table->string('agama');
             $table->text('alamat');
             $table->enum('jenis_kelamin', ['L','P']);
-            $table->string('no_ijazah')->nullable;
+            $table->string('no_ijazah')->nullable();
             $table->timestamps();
         });
     }

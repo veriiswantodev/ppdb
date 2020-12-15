@@ -12,7 +12,7 @@
 <!-- Bootstrap -->
 <link href="{{asset('/admin')}}/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 {{-- Bootstrap DataTable --}}
-<<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs/dt-1.10.21/b-1.6.2/b-html5-1.6.2/b-print-1.6.2/datatables.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs/dt-1.10.21/b-1.6.2/b-html5-1.6.2/b-print-1.6.2/datatables.min.css"/>
 <!-- Font Awesome -->
 <link href="{{asset('/admin')}}/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 {{-- TOASTR --}}
